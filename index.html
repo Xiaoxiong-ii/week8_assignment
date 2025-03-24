@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My personal website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        'fade-in': 'fadeIn 1s ease-in',
+                        'scale-in': 'scaleIn 0.5s ease-out',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        scaleIn: {
+                            '0%': { transform: 'scale(0.95)', opacity: '0' },
+                            '100%': { transform: 'scale(1)', opacity: '1' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- header -->
+    <nav class="fixed w-full bg-white shadow-md z-50 transition-all duration-300">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <a href="#" class="text-xl font-bold text-gray-800 hover:text-blue-600 transition-colors">My personal website</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-gray-600 hover:text-blue-600 transition-colors">About me</a>
+                    <a href="#education" class="text-gray-600 hover:text-blue-600 transition-colors">Educational experience</a>
+                    <a href="#contact" class="text-gray-600 hover:text-blue-600 transition-colors">Contact information</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- personal photo -->
+    <section id="about" class="pt-24 pb-12 bg-gradient-to-b from-blue-50 to-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+                <div class="flex gap-4">
+                    <div class="w-48 h-64 rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <img src="image/a.JPEG"  class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-48 h-64 rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <img src="image/b.JPEG"  class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-48 h-64 rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <img src="image/c.JPEG"  class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="text-center md:text-left max-w-lg animate-fade-in">
+                    <h1 class="text-4xl font-bold text-gray-800 mb-4">SHANG Qihan</h1>
+                    <p class="text-gray-600 text-lg mb-4">Like photography, design, explore the field of media.<br> 
+                        Hope to have the opportunity to learn more new things in the future!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Educational experience -->
+    <section id="education" class="py-12">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Educational experience</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 animate-scale-in">
+                    <div class="flex items-center mb-4">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <img src="school_image/cuc.jpg" alt="CUC" class="w-full h-full object-cover rounded-full">
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800">Communication University of China</h3>
+                            <p class="text-gray-600">Photography</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">2020 - 2024</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 animate-scale-in">
+                    <div class="flex items-center mb-4">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <img src="school_image/hkbu.jpg" alt="HKBU" class="w-full h-full object-cover rounded-full">
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800">Hong Kong Baptist University</h3>
+                            <p class="text-gray-600">AI and Digital Media</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">2024 - 2025</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- contact information -->
+    <section id="contact" class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Contact information</h2>
+            <div class="flex flex-wrap justify-center gap-8">
+                <a href="mailto:your.email@example.com" class="flex items-center space-x-2 text-gray-600 hover:text-blue-600 transition-colors">
+                    <i class="fas fa-envelope text-2xl"></i>
+                    <span>24451320@life.hkbu.edu.hk</span>
+                </a>
+                <a href="#" class="flex items-center space-x-2 text-gray-600 hover:text-blue-600 transition-colors">
+                    <i class="fab fa-github text-2xl"></i>
+                    <span>GitHub</span>
+                </a>
+                <a href="#" class="flex items-center space-x-2 text-gray-600 hover:text-blue-600 transition-colors">
+                    <i class="fab fa-linkedin text-2xl"></i>
+                    <span>LinkedIn</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>Welcome to contact!</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to the top button -->
+    <button id="scrollTop" class="fixed bottom-8 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-300 opacity-0 invisible">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        const images = document.querySelectorAll('.personal-photos img');
+        let currentImageIndex = 0;
+
+        function nextImage() {
+            images[currentImageIndex].classList.add('opacity-0');
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            images[currentImageIndex].classList.remove('opacity-0');
+        }
+
+
+        // Scroll to the top button
+        const scrollTopBtn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.classList.remove('opacity-0', 'invisible');
+            } else {
+                scrollTopBtn.classList.add('opacity-0', 'invisible');
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Navigation bar scrolling effect
+        let lastScroll = 0;
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll <= 0) {
+                nav.classList.remove('shadow-md');
+            } else {
+                nav.classList.add('shadow-md');
+            }
+            lastScroll = currentScroll;
+        });
+    </script>
+</body>
+</html> 
